@@ -3,462 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Support - Hệ thống hỗ trợ khách hàng trực tuyến</title>
+  <title>Live Support - Giao diện trung tâm hỗ trợ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="brand">
-        <span class="logo">LS</span>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <span class="sidebar__logo">LS</span>
         <div>
-          <h1>Live Support</h1>
-          <p>Hệ thống hỗ trợ khách hàng trực tuyến thông minh</p>
+          <strong>Live Support</strong>
+          <small>Customer Care Hub</small>
         </div>
       </div>
-      <nav>
-        <a href="#tinh-nang">Tính năng</a>
-        <a href="#giao-dien">Giao diện</a>
-        <a href="#bang-gia">Bảng giá</a>
-        <a href="#tai-nguyen">Tài nguyên</a>
-        <a href="#lien-he" class="btn btn-primary">Liên hệ demo</a>
+      <nav class="sidebar__nav" aria-label="Điều hướng chính">
+        <a class="is-active" href="#">Bảng điều khiển</a>
+        <a href="#">Hội thoại</a>
+        <a href="#">Ticket</a>
+        <a href="#">Tri thức</a>
+        <a href="#">Báo cáo</a>
+        <a href="#">Cài đặt</a>
       </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <h2>Đồng hành cùng đội ngũ chăm sóc khách hàng 24/7</h2>
-          <p>
-            Thiết kế Live Support giúp đội ngũ hỗ trợ xử lý yêu cầu đa kênh, tự động hoá quy trình và nâng cao mức độ hài lòng của khách hàng trong từng tương tác.
-          </p>
-          <div class="hero__actions">
-            <a href="#giao-dien" class="btn btn-primary">Khám phá giao diện</a>
-          </div>
-          <div class="hero__stats">
-            <div>
-              <strong>50%</strong>
-              <span>Giảm thời gian phản hồi</span>
-            </div>
-            <div>
-              <strong>92%</strong>
-              <span>Tỷ lệ hài lòng khách hàng</span>
-            </div>
-            <div>
-              <strong>+30</strong>
-              <span>Tích hợp sẵn sàng</span>
-            </div>
-          </div>
+      <div class="sidebar__insights">
+        <h3>Tổng quan SLA</h3>
+        <div class="insight-card">
+          <span>Phản hồi lần đầu</span>
+          <strong>3 phút</strong>
         </div>
-        <div class="hero__mockup">
-          <div class="chat-window" aria-live="polite">
-            <header>
+        <div class="insight-card">
+          <span>Tỷ lệ SLA</span>
+          <strong>92%</strong>
+        </div>
+        <div class="insight-card">
+          <span>CSAT</span>
+          <strong>4.8 / 5</strong>
+        </div>
+      </div>
+      <button class="sidebar__cta">Tạo ticket mới</button>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace__header">
+        <div>
+          <h1>Hỗ trợ khách hàng</h1>
+          <p>Giám sát hội thoại đa kênh và SLA theo thời gian thực.</p>
+        </div>
+        <div class="workspace__actions">
+          <label class="search">
+            <span class="search__icon" aria-hidden="true">🔍</span>
+            <input type="search" placeholder="Tìm kiếm hội thoại, ticket..." aria-label="Tìm kiếm" />
+          </label>
+          <button class="btn btn--outline">Bộ lọc</button>
+          <button class="btn">Tạo hội thoại</button>
+        </div>
+      </header>
+
+      <section class="workspace__body">
+        <section class="threads" aria-label="Danh sách hội thoại">
+          <header class="threads__header">
+            <h2>Hội thoại đang mở</h2>
+            <span class="badge">12</span>
+          </header>
+          <ul class="thread-list">
+            <li class="thread is-selected">
               <div>
-                <h3>Hỗ trợ trực tuyến</h3>
-                <small>Đang hoạt động</small>
+                <h3>Nguyễn Lâm</h3>
+                <p>Không nhận được email xác nhận đơn hàng.</p>
               </div>
-              <span class="chat-window__status" aria-hidden="true">●</span>
-            </header>
-            <div class="chat-body">
-              <div class="message message--agent">
-                <span class="name">Agent Mai</span>
-                <p>Xin chào Lâm, em có thể hỗ trợ anh thiết lập chatbot ngay hôm nay.</p>
-                <time>09:12</time>
-              </div>
-              <div class="message message--user">
-                <span class="name">Bạn</span>
-                <p>Tuyệt vời! Anh cần tự động phân loại ticket.</p>
-                <time>09:13</time>
-              </div>
-              <div class="message message--agent">
-                <span class="name">Agent Mai</span>
-                <p>Anh có thể bật tính năng gợi ý câu trả lời và SLA theo mức độ ưu tiên.</p>
+              <div class="thread__meta">
+                <span class="thread__channel">Email</span>
                 <time>09:14</time>
               </div>
-            </div>
-            <form class="chat-input" action="#" aria-label="Gửi tin nhắn hỗ trợ">
-              <input type="text" placeholder="Nhập tin nhắn..." required>
-              <button type="submit" class="btn btn-primary">Gửi</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tinh-nang" class="section">
-      <div class="container section__header">
-        <h2>Bộ tính năng toàn diện</h2>
-        <p>Kết nối đa kênh, quản trị tri thức, tự động hoá và phân tích nâng cao trong một nền tảng thống nhất.</p>
-      </div>
-      <div class="container card-grid">
-        <article class="card">
-          <h3>Hộp thư đa kênh</h3>
-          <p>Nhập mọi yêu cầu từ Email, Livechat, Zalo, Facebook và tổng đài VoIP vào một hộp thư thống nhất.</p>
-          <ul>
-            <li>Định tuyến thông minh theo kỹ năng</li>
-            <li>SLA tuỳ chỉnh theo từng nhóm khách hàng</li>
-            <li>Tự động phân loại ticket bằng AI</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Trung tâm tri thức</h3>
-          <p>Tạo, quản lý và đo lường hiệu quả của bài viết hướng dẫn giúp khách hàng tự phục vụ.</p>
-          <ul>
-            <li>Soạn thảo markdown, gợi ý nội dung</li>
-            <li>Gợi ý bài viết liên quan trong chat</li>
-            <li>Báo cáo lượt xem, tỷ lệ thoát</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Tự động hoá quy trình</h3>
-          <p>Xây dựng kịch bản chăm sóc và phản hồi tự động với trình kéo thả trực quan.</p>
-          <ul>
-            <li>Trigger theo sự kiện và dữ liệu</li>
-            <li>Gợi ý trả lời dựa trên lịch sử tương tác</li>
-            <li>Hợp nhất với CRM hiện có</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Phân tích hiệu suất</h3>
-          <p>Tăng trưởng dịch vụ dựa trên số liệu thời gian thực và bảng điều khiển tuỳ biến.</p>
-          <ul>
-            <li>Báo cáo SLA, CSAT, NPS</li>
-            <li>Dashboard trực quan kéo thả</li>
-            <li>Cảnh báo khi vượt ngưỡng</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="giao-dien" class="section section--alt">
-      <div class="container section__header">
-        <h2>Giao diện điều phối hỗ trợ</h2>
-        <p>Hình dung rõ ràng các phân hệ chính của Live Support với bảng điều khiển hiện đại.</p>
-      </div>
-      <div class="container layout-grid">
-        <div class="layout-card">
-          <header>
-            <h3>Bảng điều khiển</h3>
-            <span class="badge">Realtime</span>
-          </header>
-          <ul>
-            <li>Tổng quan SLA, CSAT, backlog</li>
-            <li>Biểu đồ tình trạng kênh</li>
-            <li>Top agent theo hiệu suất</li>
-          </ul>
-        </div>
-        <div class="layout-card">
-          <header>
-            <h3>Hàng chờ ticket</h3>
-            <span class="badge badge--green">AI Assist</span>
-          </header>
-          <div class="ticket-list" role="list">
-            <article class="ticket" role="listitem">
+            </li>
+            <li class="thread">
               <div>
-                <h4>#2568 - Thanh toán bị từ chối</h4>
-                <p>Khách hàng báo lỗi khi thanh toán qua thẻ tín dụng.</p>
+                <h3>Trần Mai</h3>
+                <p>Chatbot trả lời trùng lặp nội dung.</p>
               </div>
-              <span class="status status--high">Khẩn</span>
-            </article>
-            <article class="ticket" role="listitem">
+              <div class="thread__meta">
+                <span class="thread__channel thread__channel--chat">Live chat</span>
+                <time>09:05</time>
+              </div>
+            </li>
+            <li class="thread">
               <div>
-                <h4>#2570 - Cập nhật thông tin tài khoản</h4>
-                <p>Yêu cầu chỉnh sửa thông tin doanh nghiệp.</p>
+                <h3>EduNext</h3>
+                <p>Yêu cầu nâng cấp gói Professional lên Enterprise.</p>
               </div>
-              <span class="status status--medium">Cao</span>
-            </article>
-            <article class="ticket" role="listitem">
+              <div class="thread__meta">
+                <span class="thread__channel thread__channel--voice">Tổng đài</span>
+                <time>08:52</time>
+              </div>
+            </li>
+            <li class="thread">
               <div>
-                <h4>#2573 - Không nhận được email xác nhận</h4>
-                <p>Hệ thống gửi email chậm trong giờ cao điểm.</p>
+                <h3>Thuỷ Tiên</h3>
+                <p>Thắc mắc về chính sách bảo mật dữ liệu.</p>
               </div>
-              <span class="status status--low">Thấp</span>
-            </article>
-          </div>
-        </div>
-        <div class="layout-card layout-card--wide">
-          <header>
-            <h3>Phòng chat trực tiếp</h3>
-            <span class="badge badge--purple">Co-browsing</span>
+              <div class="thread__meta">
+                <span class="thread__channel thread__channel--social">Facebook</span>
+                <time>08:37</time>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="conversation" aria-label="Hội thoại chi tiết">
+          <header class="conversation__header">
+            <div>
+              <h2>Nguyễn Lâm</h2>
+              <span class="conversation__tag conversation__tag--priority">Ưu tiên cao</span>
+              <span class="conversation__tag">Đơn hàng #LS-3026</span>
+            </div>
+            <div class="conversation__status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Agent Mai đang xử lý</span>
+            </div>
           </header>
-          <div class="chat-preview">
-            <div class="chat-preview__conversation">
-              <div class="message message--agent">
-                <span class="name">Agent Linh</span>
-                <p>Chào anh, em vừa xem log và phát hiện lỗi API.</p>
+
+          <div class="conversation__history">
+            <div class="message message--customer">
+              <div class="message__meta">
+                <span class="avatar" aria-hidden="true">NL</span>
+                <div>
+                  <strong>Nguyễn Lâm</strong>
+                  <time>09:10</time>
+                </div>
               </div>
-              <div class="message message--user">
-                <span class="name">Khách hàng</span>
-                <p>Cảm ơn em, anh đang cần cập nhật gấp.</p>
+              <p>Chào bạn, mình đã thanh toán nhưng chưa nhận được email xác nhận đơn hàng.</p>
+            </div>
+            <div class="message message--agent">
+              <div class="message__meta">
+                <span class="avatar avatar--agent" aria-hidden="true">AM</span>
+                <div>
+                  <strong>Agent Mai</strong>
+                  <time>09:12</time>
+                </div>
+              </div>
+              <p>Chào anh Lâm, em đang kiểm tra hệ thống và sẽ phản hồi trong giây lát.</p>
+            </div>
+            <div class="message message--system">
+              <p>Workflow "Kiểm tra email giao dịch" đã chạy thành công.</p>
+              <time>09:13</time>
+            </div>
+            <div class="message message--agent">
+              <div class="message__meta">
+                <span class="avatar avatar--agent" aria-hidden="true">AM</span>
+                <div>
+                  <strong>Agent Mai</strong>
+                  <time>09:14</time>
+                </div>
+              </div>
+              <p>Email xác nhận đã được gửi lại. Anh vui lòng kiểm tra hộp thư đến và mục spam giúp em nhé!</p>
+            </div>
+          </div>
+
+          <form class="composer" action="#" aria-label="Trả lời khách hàng">
+            <label class="composer__field">
+              <textarea rows="2" placeholder="Nhập câu trả lời..." required></textarea>
+            </label>
+            <div class="composer__actions">
+              <button type="button" class="btn btn--ghost">Đính kèm</button>
+              <button type="submit" class="btn">Gửi phản hồi</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="customer" aria-label="Thông tin khách hàng">
+          <section class="customer__card">
+            <h2>Hồ sơ khách hàng</h2>
+            <div class="customer__identity">
+              <span class="avatar avatar--large" aria-hidden="true">NL</span>
+              <div>
+                <strong>Nguyễn Lâm</strong>
+                <p>Gói Professional • Thành viên từ 2022</p>
               </div>
             </div>
-            <aside class="chat-preview__sidebar">
-              <h4>Thông tin khách hàng</h4>
-              <dl>
+            <dl class="customer__stats">
+              <div>
+                <dt>Ticket mở</dt>
+                <dd>02</dd>
+              </div>
+              <div>
+                <dt>CSAT</dt>
+                <dd>4.9 / 5</dd>
+              </div>
+              <div>
+                <dt>Doanh thu</dt>
+                <dd>75 triệu</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="customer__card">
+            <h3>Lịch sử tương tác</h3>
+            <ul class="timeline">
+              <li>
+                <span class="timeline__dot"></span>
                 <div>
-                  <dt>Gói dịch vụ</dt>
-                  <dd>Professional</dd>
+                  <strong>Gia hạn gói Professional</strong>
+                  <time>02/2024</time>
                 </div>
+              </li>
+              <li>
+                <span class="timeline__dot"></span>
                 <div>
-                  <dt>CSAT trung bình</dt>
-                  <dd>4.7 / 5</dd>
+                  <strong>Tham gia webinar tối ưu SLA</strong>
+                  <time>12/2023</time>
                 </div>
+              </li>
+              <li>
+                <span class="timeline__dot"></span>
                 <div>
-                  <dt>Ticket mở</dt>
-                  <dd>03</dd>
+                  <strong>Ticket: Hỗ trợ triển khai chatbot</strong>
+                  <time>09/2023</time>
                 </div>
-              </dl>
-              <button class="btn btn-secondary">Mở hồ sơ đầy đủ</button>
-            </aside>
-          </div>
-        </div>
-      </div>
-    </section>
+              </li>
+            </ul>
+          </section>
 
-    <section id="tai-nguyen" class="section">
-      <div class="container section__header">
-        <h2>Tài nguyên hỗ trợ đội ngũ chăm sóc</h2>
-        <p>Sẵn sàng triển khai nhanh chóng với quy trình chuẩn và tài liệu đầy đủ.</p>
-      </div>
-      <div class="container resources">
-        <div class="resource-card">
-          <h3>Onboarding 14 ngày</h3>
-          <p>Checklist triển khai chuẩn, đào tạo agent và cấu hình tự động hoá.</p>
-          <a href="#" class="resource-link">Tải checklist</a>
-        </div>
-        <div class="resource-card">
-          <h3>Thư viện kịch bản</h3>
-          <p>30+ kịch bản chăm sóc khách hàng cho các ngành B2C &amp; B2B.</p>
-          <a href="#" class="resource-link">Xem thư viện</a>
-        </div>
-        <div class="resource-card">
-          <h3>API &amp; SDK</h3>
-          <p>Tích hợp nhanh chóng với CRM, Billing, Data Warehouse.</p>
-          <a href="#" class="resource-link">Xem tài liệu</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="container section__header">
-        <h2>Chỉ số vận hành nổi bật</h2>
-      </div>
-      <div class="container analytics">
-        <div class="analytics__chart" role="img" aria-label="Biểu đồ SLA mô phỏng">
-          <div class="chart-bars">
-            <div class="chart-bar" style="--value: 92%">
-              <span>Live chat</span>
-              <strong>92%</strong>
-            </div>
-            <div class="chart-bar" style="--value: 84%">
-              <span>Email</span>
-              <strong>84%</strong>
-            </div>
-            <div class="chart-bar" style="--value: 76%">
-              <span>Tổng đài</span>
-              <strong>76%</strong>
-            </div>
-            <div class="chart-bar" style="--value: 68%">
-              <span>Mạng xã hội</span>
-              <strong>68%</strong>
-            </div>
-          </div>
-        </div>
-        <ul class="analytics__stats">
-          <li>
-            <strong>3 phút</strong>
-            <span>Thời gian phản hồi lần đầu trung bình</span>
-          </li>
-          <li>
-            <strong>89%</strong>
-            <span>Ticket xử lý tự động bằng chatbot</span>
-          </li>
-          <li>
-            <strong>4.8 / 5</strong>
-            <span>CSAT qua live chat</span>
-          </li>
-          <li>
-            <strong>+120%</strong>
-            <span>Tỷ lệ giữ chân khách hàng</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section testimonials">
-      <div class="container section__header">
-        <h2>Khách hàng nói gì về Live Support</h2>
-      </div>
-      <div class="container testimonials__grid">
-        <blockquote>
-          <p>“Live Support giúp đội ngũ của tôi tiết kiệm 40% thời gian xử lý ticket và tăng trải nghiệm khách hàng rõ rệt.”</p>
-          <footer>
-            <span>Mai Anh</span>
-            <span>Head of Customer Success - FinTechX</span>
-          </footer>
-        </blockquote>
-        <blockquote>
-          <p>“Sau 2 tuần triển khai, chúng tôi đã tích hợp chatbot hỗ trợ 24/7 và giảm tải cho tổng đài viên.”</p>
-          <footer>
-            <span>Đức Long</span>
-            <span>Giám đốc vận hành - EduNext</span>
-          </footer>
-        </blockquote>
-        <blockquote>
-          <p>“Dashboard trực quan giúp ban lãnh đạo theo dõi SLA thời gian thực và đưa ra quyết định nhanh chóng.”</p>
-          <footer>
-            <span>Thuỷ Tiên</span>
-            <span>Customer Care Lead - RetailOne</span>
-          </footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <section id="bang-gia" class="section pricing">
-      <div class="container section__header">
-        <h2>Bảng giá linh hoạt</h2>
-        <p>Lựa chọn gói dịch vụ phù hợp với quy mô và mục tiêu vận hành của doanh nghiệp.</p>
-      </div>
-      <div class="container pricing__grid">
-        <div class="price-card">
-          <h3>Starter</h3>
-          <p class="price">2.5 triệu / tháng</p>
-          <ul>
-            <li>5 agent</li>
-            <li>Live chat + Email</li>
-            <li>Thư viện tri thức cơ bản</li>
-            <li>Báo cáo tiêu chuẩn</li>
-          </ul>
-          <button class="btn btn-secondary">Dùng thử</button>
-        </div>
-        <div class="price-card price-card--featured">
-          <h3>Professional</h3>
-          <p class="price">5.9 triệu / tháng</p>
-          <ul>
-            <li>20 agent</li>
-            <li>Chatbot AI + Omnichannel</li>
-            <li>Tự động hoá quy trình</li>
-            <li>Dashboard tuỳ chỉnh</li>
-          </ul>
-          <button class="btn btn-primary">Đăng ký</button>
-        </div>
-        <div class="price-card">
-          <h3>Enterprise</h3>
-          <p class="price">Liên hệ</p>
-          <ul>
-            <li>SLA theo thoả thuận</li>
-            <li>Tích hợp chuyên sâu</li>
-            <li>Đội ngũ triển khai chuyên biệt</li>
-            <li>Security &amp; SSO nâng cao</li>
-          </ul>
-          <button class="btn btn-secondary">Nhận tư vấn</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faq">
-      <div class="container section__header">
-        <h2>Câu hỏi thường gặp</h2>
-      </div>
-      <div class="container faq__list" id="faq">
-        <details class="faq-item" open>
-          <summary class="faq-item__question">Live Support tích hợp được những kênh nào?</summary>
-          <div class="faq-item__answer">
-            <p>Hệ thống hỗ trợ live chat, email, mạng xã hội, tổng đài và ứng dụng OTT như Zalo, Viber.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__question">Mất bao lâu để triển khai?</summary>
-          <div class="faq-item__answer">
-            <p>Thời gian trung bình 2-4 tuần, tuỳ vào mức độ tích hợp và tuỳ chỉnh quy trình.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__question">Có hỗ trợ tuỳ chỉnh thương hiệu không?</summary>
-          <div class="faq-item__answer">
-            <p>Toàn bộ widget chat, email template, knowledge base đều cho phép tuỳ chỉnh màu sắc, logo và domain.</p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section id="lien-he" class="section cta">
-      <div class="container cta__content">
-        <div>
-          <h2>Sẵn sàng nâng cấp trải nghiệm khách hàng?</h2>
-          <p>Đăng ký demo để đội ngũ chuyên gia hỗ trợ bạn xây dựng trung tâm chăm sóc khách hàng hiện đại.</p>
-        </div>
-        <form class="cta__form" action="#">
-          <div class="form-field">
-            <label for="fullName">Họ và tên</label>
-            <input type="text" id="fullName" name="fullName" required>
-          </div>
-          <div class="form-field">
-            <label for="company">Doanh nghiệp</label>
-            <input type="text" id="company" name="company" required>
-          </div>
-          <div class="form-field">
-            <label for="email">Email công việc</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-field">
-            <label for="teamSize">Quy mô đội ngũ hỗ trợ</label>
-            <select id="teamSize" name="teamSize" required>
-              <option value="">Chọn quy mô</option>
-              <option value="1-5">1 - 5 người</option>
-              <option value="6-20">6 - 20 người</option>
-              <option value="21-50">21 - 50 người</option>
-              <option value="50+">Trên 50 người</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary">Đăng ký demo</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <a href="#lien-he" class="floating-chat" aria-label="Đăng ký demo nhanh">
-    <span>Chat hỗ trợ</span>
-  </a>
-
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <strong>Live Support</strong>
-        <p>Kết nối khách hàng và doanh nghiệp qua mọi điểm chạm.</p>
-      </div>
-      <div>
-        <h4>Sản phẩm</h4>
-        <ul>
-          <li><a href="#tinh-nang">Tính năng</a></li>
-          <li><a href="#bang-gia">Bảng giá</a></li>
-          <li><a href="#tai-nguyen">Tài nguyên</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hỗ trợ</h4>
-        <ul>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#">Trung tâm trợ giúp</a></li>
-          <li><a href="#">Chính sách bảo mật</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Kết nối</h4>
-        <ul>
-          <li><a href="mailto:support@livesupport.vn">support@livesupport.vn</a></li>
-          <li><a href="tel:+842873000000">(+84) 2873 000 000</a></li>
-          <li><a href="#">LinkedIn</a> · <a href="#">Facebook</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="footer__copy">© 2024 Live Support. All rights reserved.</p>
-  </footer>
-
+          <section class="customer__card">
+            <h3>Ghi chú nội bộ</h3>
+            <p>Khách hàng ưu tiên nhận thông báo qua email và sẵn sàng tham gia phỏng vấn khách hàng tiêu biểu.</p>
+            <button class="btn btn--outline btn--full">Thêm ghi chú</button>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
